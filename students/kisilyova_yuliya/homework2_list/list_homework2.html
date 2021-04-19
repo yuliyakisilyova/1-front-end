@@ -9,8 +9,6 @@
 </head>
 
 <body>
-
-
     <h1>Список покупок</h1>
     <form action="">
         <fieldset>
@@ -35,8 +33,6 @@
                 <option value="Крупы">Крупы</option>
                 <option value="Рыба">Рыба</option>
                 <option value="Бытовая химия">Бытовая химия</option>
-                <option hidden disabled selected>список</option>
-
             </select>
             <form action="">
                 <button style="vertical-align: middle">Выбрать</button>
@@ -44,7 +40,22 @@
         </fieldset>
         <br>
         <fieldset>
-            <legend>Шаг №3 - Дописать недостающие категории из списка</legend>
+            <legend>Шаг №3 - Выбрать нужную категорию</legend>
+            <p><input type="checkbox">
+            <label for="list">Овощи</label></p>
+            <p><input type="checkbox">
+            <label for="list">Мясо</label></p>
+            <p><input type="checkbox">
+            <label for="list">Специи</label></p>
+            <p><input type="checkbox">
+            <label for="list">Крупы</label></p> 
+            <p><input type="checkbox">
+            <label for="list">Рыба</label></p>
+            <p><input type="checkbox">
+            <label for="list">Бытовая химия</label></p>
+        </fieldset>
+        <fieldset>
+            <legend>Шаг №4 - Дописать недостающие категории из списка</legend>
             <label for="list">Допиши недостающие категории</label> <br>
             <textarea name="manual category" id="list"></textarea>
             <form action="">
