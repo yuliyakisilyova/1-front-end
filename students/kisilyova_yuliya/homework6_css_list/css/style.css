@@ -1,12 +1,10 @@
 * {
     transition: all .1s ease-in;
-    margin: 0;
-    padding: 0;
 }
 
 body {
     font-family: 'Trebuchet MS', Arial, sans-serif;
-    background: #374040
+    background: #374040;
 }
 
 header {
@@ -25,30 +23,46 @@ main {
     margin-left: 30%;
     margin-right: 30%;
     color: white;
-    line-height: 3;
 }
 
-main>ul>li {
+form>div {
     font-size: 22px;
+    text-indent: 1em;
+    line-height: 3
 }
 
-li:nth-child(odd) {
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+span {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+
+form>div:nth-child(odd) {
     display: block;
-    background-color: #7A7593
+    background-color: #777197
 }
 
-li:nth-child(even) {
+form>div:nth-child(even) {
     display: block;
     background-color: #88839E
+}
+
+form>div:hover {
+    background-color: #6b648a;
 }
 
 footer {
     background-color: #424a4a;
     color: #db9087;
     display: block;
-    width: auto;
     text-align: center;
     margin-left: 30%;
     margin-right: 30%;
     font-size: 22px;
+    bottom: 1em;
+    top: 1em;
 }
