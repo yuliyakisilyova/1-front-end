@@ -1,15 +1,32 @@
 * {
     transition: all .1s ease-in;
+    padding: 0px;
+    margin: 0px auto;
+    
+
+}
+html, body {
+    width: 100%;
+    height: 100%;
 }
 
 body {
     font-family: 'Trebuchet MS', Arial, sans-serif;
     background: #374040;
+    border-style: solid;
+    border-color: white;
+    border-width: 13px;
+    
 }
 
-header {
+header { 
     background-color: #424a4a;
     color: #db9087;
+    text-align: center;
+    height: 120px;
+    line-height: 2em;
+}
+header>div {
     text-align: center;
 }
 
@@ -18,7 +35,6 @@ header>p {
     font-weight: normal;
 }
 
-
 main {
     margin-left: 30%;
     margin-right: 30%;
@@ -26,9 +42,9 @@ main {
 }
 
 form>div {
-    font-size: 22px;
+    font-size: 17px;
     text-indent: 1em;
-    line-height: 3
+    line-height: 3;
 }
 
 input[type="checkbox"] {
@@ -39,8 +55,18 @@ input[type="checkbox"] {
 span {
     color: rgba(255, 255, 255, 0.5);
     font-size: 14px;
+    vertical-align: middle;
 }
-
+span::before{
+    content: "(";
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+span::after{
+    content: ")";
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
 form>div:nth-child(odd) {
     display: block;
     background-color: #777197
@@ -53,16 +79,42 @@ form>div:nth-child(even) {
 
 form>div:hover {
     background-color: #6b648a;
+    border-top-style: solid;
+    border-bottom-style: solid;
 }
 
+/*input[type="checkbox"]+label::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border: solid 2px black; 
+    background-color: white;
+    position: inherit;
+}
+
+input[type="checkbox"]:checked + label::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background-image: url(img/icon_check.svg);
+        background-size: 16px 16px;
+}*/
+
+input[type="checkbox"]:checked + label {
+    text-decoration-line: line-through;
+}
+
+form>div:active {
+    background-color: rgb(209, 125, 91);
+}
 footer {
     background-color: #424a4a;
-    color: #db9087;
-    display: block;
-    text-align: center;
     margin-left: 30%;
     margin-right: 30%;
-    font-size: 22px;
-    bottom: 1em;
-    top: 1em;
+    height: 60px;
+    color: #db9087;
+    text-align: center;
+    font-size: 20px;
 }
