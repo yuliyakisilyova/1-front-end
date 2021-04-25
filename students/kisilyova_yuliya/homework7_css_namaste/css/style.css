@@ -1,0 +1,47 @@
+header>p,h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+.p1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #898f99;
+}
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48pt;
+    color: #0ec8cb;
+    font-style: lighter;
+
+}
+.p2 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18pt;
+    color: #999999;
+}
+.container {
+max-width: 940px;
+margin: 0 auto;
+}
+.container div {
+    display: inline-block;
+    max-width: 210px;
+    text-align: center;
+    border-right: solid 2px grey;
+}
+div>strong {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21pt;
+    text-transform: uppercase;
+}
+div>p{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14pt;
+    color: #777777;  
+}
+.test1 {
+    border: solid 5px black;
+    max-width: 940px;
+    margin: 0 auto;
+}
