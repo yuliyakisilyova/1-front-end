@@ -1,1 +1,1 @@
-students/kisilyova_yuliya/homework6_css_list/index.html
+https://yuliyakisilyova.github.io/1-front-end/students/kisilyova_yuliya/homework6_css_list/index.html
