@@ -1,4 +1,4 @@
-header>p,h2 {
+header>p,h1 {
     text-transform: uppercase;
     text-align: center;
 }
@@ -8,7 +8,7 @@ header>p,h2 {
     font-weight: bold;
     color: #898f99;
 }
-h2 {
+h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 48pt;
     color: #0ec8cb;
@@ -20,28 +20,48 @@ h2 {
     font-size: 18pt;
     color: #999999;
 }
-.container {
-max-width: 940px;
-margin: 0 auto;
+.conteiner {
+    width: 940px;
+    margin: 0 auto;
 }
-.container div {
-    display: inline-block;
-    max-width: 210px;
+.cards {
+    box-sizing: content-box;
+    width: 213px;
+    margin: 0px;
     text-align: center;
-    border-right: solid 2px grey;
-}
-div>strong {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 21pt;
-    text-transform: uppercase;
-}
-div>p{
+    float: left;
+    padding: 50px 10px;
     font-family: 'PT Sans', sans-serif;
     font-size: 14pt;
     color: #777777;  
+    text-align: center justify;
+    list-style-type: none;
 }
-.test1 {
-    border: solid 5px black;
-    max-width: 940px;
-    margin: 0 auto;
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18pt;
+    text-transform: uppercase;
+    height: 36pt;
+    height: 40px;
+    margin-bottom: 40px;
+    color: black;
+}
+.cards li {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14pt;
+    color: #777777;  
+    text-align: center justify;
+    list-style-type: none;
+    margin-bottom: 80px;
+}
+.cards:hover,
+.cards:hover>li,
+.cards:hover>h2 {
+    background-color: #0ec8cb;
+    color: white;
+    fill: #fff;}
+svg {
+    padding-top: 55px;
+    margin-bottom: 60px;
 }
