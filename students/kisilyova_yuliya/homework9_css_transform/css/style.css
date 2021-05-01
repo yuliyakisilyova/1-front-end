@@ -1,0 +1,52 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+body, html {
+    height: 100%;
+}
+body {
+    background-color: rgb(176, 124, 247);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1500px;
+    height: 864px;
+    z-index: 3;
+  }
+  header, body, footer {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+  }
+  h1 {
+      font-size: 90px;
+      text-align: center;
+      margin-top: 100px;
+      margin-bottom: 25px;
+  }
+  .header {
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 38px;
+    margin-left: 465px;
+    margin-right: 465px;
+  }
+  .conteiner {
+      margin: 0 auto;
+      max-width: 1165px;
+  }
+  .boxes li {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 33%;
+  }
+  .gradient {
+    background-image: url("gradient.png");
+    position: absolute;
+    left: 165px;
+    top: 488px;
+    width: 370px;
+    height: 151px;
+    z-index: 33;
+  }
+  
