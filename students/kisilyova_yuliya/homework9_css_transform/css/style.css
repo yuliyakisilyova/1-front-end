@@ -11,38 +11,36 @@ body {
     left: 0px;
     top: 0px;
     box-sizing: border-box;
-  }
-
-  header, body, button {
     font-family: 'Raleway', sans-serif;
     color:#ffffff;
   }
-  h1 {
+  .title {
       font-size: 90px;
       text-align: center;
-      margin-top: 100px;
+      margin-top: 80px;
       margin-bottom: 25px;
   }
-  .header {
+  .subtitle {
     font-size: 17px;
     text-align: center;
-    margin-bottom: 38px;
-    margin-left: 465px;
-    margin-right: 465px;
+    margin-bottom: 30px;
+    margin-left: 650px;
+    margin-right: 650px;
+    line-height: 1.5;
   }
   .conteiner {
-      margin: 0 auto;
-      max-width: 1165px;
-      height: 310px;
-  }
-  .boxes1 li {
+      max-width: 1210px;
+      height: 340px;
+      margin: 0 auto;}
+  
+  .boxes li {
     box-sizing: border-box;
     display: inline-block;
     width: 33%;
+    padding: 0px 0px 0px 12px;
     position: relative;
-  }
-li {
     list-style-type: none;
+    
   }
 .date {
   display: block;
@@ -54,56 +52,61 @@ li {
   width: 60px;
   height: 60px;
   position: relative;
-  top: -290px;
+  top: -280px;
   left: -130px;
   line-height: 25px;
 }
 span {
   font-size: 32px;
+  font-weight: bold;
 }
-h2 {
+.text-details-title {
   position: relative;
-  top: -200px;
-  left: 5px;
+  top: -175px;
+  left: 15px;
   font-size: 20px;
   padding: 5px 5px 5px 5px;
   padding-right: 50px;
-  
 }
 .hour {
   position: relative;
-  top: -180px;
+  top: -165px;
   left: 20px;
+  font-size: 13px
+}
+.button {
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  
 }
 button {
-  clear: both;
-  margin: 50px 650px 120px;
+  padding: 15px;
   width: 200px;
-  height: 56px;
   background-color: #f72b3b;
+  color: #ffffff;
   font-size: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5)
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .conteiner {
   overflow: hidden;
 }
-.text_details {
+.text-details {
   position: absolute;
   top: 320px;
   left: 20px;
   transform: translateX(400px);
   transition: all 0.5s ease-in-out;
   }
-
-.block:hover .text_details {
+.boxes-list-block:hover .text-details {
   transform: translateX(0px);
 }
-
 .pic img {
   display: block;
 }
 .pic {
-  position: absolute;
+  display: inline-block;
+	position: relative;    
 }
 .pic::after {
   content: " ";
@@ -117,8 +120,7 @@ button {
   opacity: 0;
   transition: opacity .5s ease-in-out;
   color: #ffffff;
-  background-size: contain
-  
+  background-size: contain 
 }
 .pic:hover::after {
   opacity: 1;
