@@ -4,43 +4,42 @@
 }
 body, html {
     height: 100%;
+
 }
 body {
     background-color: rgb(176, 124, 247);
-    position: absolute;
     left: 0px;
     top: 0px;
-    box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
     color:#ffffff;
   }
-  .title {
+.title {
       font-size: 90px;
       text-align: center;
       margin-top: 80px;
       margin-bottom: 25px;
   }
-  .subtitle {
+.subtitle {
     font-size: 17px;
+    margin-bottom: 38px;
     text-align: center;
-    margin-bottom: 30px;
-    margin-left: 650px;
-    margin-right: 650px;
+    max-width: 600px;
     line-height: 1.5;
+    
   }
-  .conteiner {
+.conteiner {
       max-width: 1210px;
       height: 340px;
-      margin: 0 auto;}
+      margin: 0 auto;
+    }
   
-  .boxes li {
+.boxes li {
     box-sizing: border-box;
     display: inline-block;
     width: 33%;
     padding: 0px 0px 0px 12px;
     position: relative;
     list-style-type: none;
-    
   }
 .date {
   display: block;
@@ -75,10 +74,9 @@ span {
   font-size: 13px
 }
 .button {
-  padding: 35px;
+  padding: 25px;
   display: flex;
   align-items: center;
-  
 }
 button {
   padding: 15px;
