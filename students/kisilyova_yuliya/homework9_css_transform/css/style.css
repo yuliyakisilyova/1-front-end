@@ -11,19 +11,16 @@ body {
     left: 0px;
     top: 0px;
     box-sizing: border-box;
-  }
-
-  header, body, button {
     font-family: 'Raleway', sans-serif;
     color:#ffffff;
   }
-  h1 {
+  .title {
       font-size: 90px;
       text-align: center;
       margin-top: 100px;
       margin-bottom: 25px;
   }
-  .header {
+  .subtitle {
     font-size: 17px;
     text-align: center;
     margin-bottom: 38px;
@@ -35,13 +32,11 @@ body {
       max-width: 1165px;
       height: 310px;
   }
-  .boxes1 li {
+  .boxes li {
     box-sizing: border-box;
     display: inline-block;
     width: 33%;
     position: relative;
-  }
-li {
     list-style-type: none;
   }
 .date {
@@ -61,33 +56,37 @@ li {
 span {
   font-size: 32px;
 }
-h2 {
+.text-details-title {
   position: relative;
   top: -200px;
   left: 5px;
   font-size: 20px;
   padding: 5px 5px 5px 5px;
   padding-right: 50px;
-  
 }
 .hour {
   position: relative;
   top: -180px;
   left: 20px;
 }
+.button {
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  
+}
 button {
-  clear: both;
-  margin: 50px 650px 120px;
+  padding: 20px;
   width: 200px;
-  height: 56px;
   background-color: #f72b3b;
+  color: #ffffff;
   font-size: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5)
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .conteiner {
   overflow: hidden;
 }
-.text_details {
+.text-details {
   position: absolute;
   top: 320px;
   left: 20px;
@@ -95,10 +94,9 @@ button {
   transition: all 0.5s ease-in-out;
   }
 
-.block:hover .text_details {
+.boxes-list-block:hover .text-details {
   transform: translateX(0px);
 }
-
 .pic img {
   display: block;
 }
@@ -117,8 +115,7 @@ button {
   opacity: 0;
   transition: opacity .5s ease-in-out;
   color: #ffffff;
-  background-size: contain
-  
+  background-size: contain 
 }
 .pic:hover::after {
   opacity: 1;
