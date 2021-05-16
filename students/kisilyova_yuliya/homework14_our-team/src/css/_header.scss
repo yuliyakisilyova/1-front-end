@@ -1,58 +1,47 @@
 .header {
-
-    // .header__overhead
-
     &__overhead {
-        display: block; 
+        display: block;
         color: $color-overhead;
         font-size: $font-size-overhead;
         font-family: "Raleway", Arial, Helvetica, sans-serif;
         text-transform: uppercase;
         text-align: center;
-        margin: 110px 0 10px;
+        word-spacing: 2px;
+        /*margin: 110px 0 10px;*/
+        margin: 110px 0px 10px 0px;
     }
 
-    &_border-title {
-        text-align: center;
-		}
-
-
-    // .header__title
-
-    &__text {  
-        display:inline-block;
+    &__text {
         font-family: "Roboto", Arial, Helvetica, sans-serif;
         color: $color-header;
         font-size: $font-size-header;
+        font-weight: bold;
         text-transform: uppercase;
-        padding-bottom: 20px;
+        margin: 0 auto;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    &__divide-title {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__img {
+        display: inline-block;
+        margin: 0 auto;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    &__img::before,
+    &__img::after {
+        content: " ";
+        display: inline-block;
+        background-color: $supernova;
+        height: 1px;
+        width: 211px;
+        margin: 0 0px 13px 2px;
+        padding: 0;
     }
 }
-
-.img {
-    z-index: 30;
-    margin-bottom: 50px; 
-}
-
-.img::before {
-    content: " ";
-    display:inline-block;
-    border: none;
-    background-color: $supernova;
-    height: 1px;
-    z-index: 10;
-    width: 10%;
-    margin-bottom: 10px;
-}
-    
-.img::after {
-    content: " ";
-    display:inline-block;
-    border: none;
-    background-color: $supernova;
-    height: 1px;
-    z-index: 10;
-    width: 10%;
-    margin-bottom: 10px;
-}
-    
