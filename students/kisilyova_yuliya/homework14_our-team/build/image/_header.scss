@@ -24,7 +24,6 @@
     &__divide-title {
         display: flex;
         justify-content: center;
-        align-items: center;
     }
 
     &__img {
@@ -46,7 +45,7 @@
         padding: 0;
     }
     &__divide-title {
-        margin-bottom: 40px;
+        margin-bottom: 115px;
     }
 }
 .corner-box-1 {
@@ -92,29 +91,17 @@
     width: 1170px;
     margin: 0 auto;
     display: flex;
-    justify-content: center; 
+    justify-content: center;    
 
-    &__divider {
-        border-right: 1px solid $supernova;
-    }
 }
-.employee-card {
-    width: 300px;
-    padding-left: 83px;
-    margin: 0 auto;
-    text-align: center;
+.employee {
+    width: 558px;
 
     &__name {
-        font-family: 'Roboto', Arial, Helvetica, sans-serif;
-        color: #666666;
-        font-size: 36px;
-        font-weight: bold;
-        margin-bottom: 30px;
     }
 
     // .employee__link
 
     &__link {
-        
     }
 }
