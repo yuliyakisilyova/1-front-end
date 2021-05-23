@@ -7,8 +7,7 @@
         text-transform: uppercase;
         text-align: center;
         word-spacing: 2px;
-        /*margin: 110px 0 10px;*/
-        margin: 110px 0px 10px 0px;
+        margin: 80px 0px 10px 0px;
     }
 
     &__text {
@@ -17,104 +16,26 @@
         font-size: $font-size-header;
         font-weight: bold;
         text-transform: uppercase;
-        margin: 0 auto;
-        padding-bottom: 30px;
+        margin: 10px auto 45px;
         text-align: center;
     }
-    &__divide-title {
+
+    &__line {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-    &__img {
-        display: inline-block;
-        margin: 0 auto;
-        margin: 0;
-        padding: 0;
-        border: 0;
-    }
-
-    &__img::before,
-    &__img::after {
-        content: " ";
-        display: inline-block;
         background-color: $supernova;
         height: 1px;
-        width: 211px;
-        margin: 0 0px 13px 2px;
-        padding: 0;
+        width: 450px;
     }
+
     &__divide-title {
         margin-bottom: 40px;
     }
-}
-.corner-box-1 {
-    display: inline-block;
-    width: 414px;
-    height: 414px;
-    position: relative;
-    border: 1px solid $supernova;
-    margin-right: 165px;
-}
-
-.corner-box-1:before, 
-.corner-box-1:after {
-    content: "";
-    z-index: 1;
-    display: block;
-    position: absolute;
-    background: #FFF;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transform-origin: 50% 50%;
-}
-.corner-box-1:before {
-    width: calc(100% + 4px);
-    height: 60%;
-}
-
-.corner-box-1:after {
-    height: calc(100% + 4px);
-    width: 60%;
-}
-.photo {
-    position: absolute;
-    padding: 0px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    border: 1px solid $supernova;
 }
 .container {
     width: 1170px;
     margin: 0 auto;
     display: flex;
-    justify-content: center; 
-
-    &__divider {
-        border-right: 1px solid $supernova;
-    }
-}
-.employee-card {
-    width: 300px;
-    padding-left: 83px;
-    margin: 0 auto;
-    text-align: center;
-
-    &__name {
-        font-family: 'Roboto', Arial, Helvetica, sans-serif;
-        color: #666666;
-        font-size: 36px;
-        font-weight: bold;
-        margin-bottom: 30px;
-    }
-
-    // .employee__link
-
-    &__link {
-        
-    }
+    justify-content: center;
 }
