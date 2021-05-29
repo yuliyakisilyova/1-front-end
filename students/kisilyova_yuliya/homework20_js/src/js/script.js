@@ -11,7 +11,7 @@ console.log(userYears);
 
 //3)   Запросите у пользователя длину стороны квадрата и выведите периметр такого квадрата.
 const userQuestion3square = +prompt("Пожалуйста, введите длину стороны квадрата");
-const perimeterSquare = userQuestion3square ** 2;
+const perimeterSquare = userQuestion3square * 4;
 console.log(perimeterSquare);
 
 //4)   Запросите у пользователя радиус окружности и выведите площадь такой окружности.
@@ -36,7 +36,7 @@ console.log(amountEur);
 //7)   Пользователь указывает объем флешки в Гб. Программа должна посчитать сколько файлов размером в 820 Мб помещается на флешку.
 const userQuestion7flashGB = +prompt("Пожалуйста, введите обьем носителя в Гб");
 const fileSize = 820
-const fileQuantity = (Math.floor((userQuestion7flashGB * 1000) / fileSize)) + " файла";
+const fileQuantity = (Math.floor((userQuestion7flashGB * 1024) / fileSize)) + " файла";
 console.log(fileQuantity); 
 
 //8)   Пользователь вводит сумму денег в кошельке и цену одной шоколадки. Программа выводит сколько шоколадок может купить пользователь и сколько сдачи у него останется.
@@ -47,10 +47,10 @@ console.log(resultBuying);
 
 //9)   Запросите у пользователя трехзначное число и выведите его задом наперед. Для решения задачи вам понадобится оператор % (остаток от деления).
 const userQuestion9number = +prompt("Пожалуйста, введите трехзначное число");
-const formula1 = (userQuestion9number % 100 % 10) * 100;
-const formula2 = (userQuestion9number % 100 - (userQuestion9number % 100 % 10));
+const formula1 = (userQuestion9number % 10) * 100;
+const formula2 = (userQuestion9number % 100) - (formula1 / 100);
 const formula3 = Math.floor(userQuestion9number / 100); 
-const result = formula1 + formula2 + formula3
+const result = formula1 + formula2 + formula3;
 console.log(result); 
 
 //10)   Пользователь вводит сумму вклада в банк на 2 месяца, с процентной ставкой депозита 5% годовых. Вывести сумму начисленных процентов.
