@@ -16,8 +16,7 @@ console.log(perimeterSquare);
 
 //4)   Запросите у пользователя радиус окружности и выведите площадь такой окружности.
 const userQuestion4circle = +prompt("Пожалуйста, введите радиус окружности");
-const piNumber = 3.14;
-const circleArea = piNumber * (userQuestion4circle ** 2);
+const circleArea = (Math.PI * (userQuestion4circle ** 2)).toFixed(2);
 console.log(circleArea);
 
 //5)   Запросите у пользователя расстояние в км между двумя городами и за сколько часов он хочет добраться. Посчитайте скорость, с которой необходимо двигаться, чтобы успеть вовремя.
