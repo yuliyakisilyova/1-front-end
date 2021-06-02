@@ -71,6 +71,8 @@
      max-width: $container-width;
      margin: 0 auto;
      padding: $default-gap;
+     display: flex;
+     justify-content: center;
 }
 
 .row {
@@ -82,5 +84,5 @@
 }
 
 [class^="col-"] {
-     padding: $default-gap;
+     padding: 15px 90px;
 }
