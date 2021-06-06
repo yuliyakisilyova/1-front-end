@@ -41,7 +41,9 @@
     align-self: normal;
 
     &__input {
-        width: 650px;
+        display: inline-block;
+        max-width: 650px;
+        width: 100%;
         height: 60px;
         box-sizing: border-box;
         border: 2px solid white;
@@ -67,6 +69,7 @@
         font-size: 14px;
         position: relative;
     }
+
     &__button::after {
         content: "";
         position: absolute;
@@ -81,107 +84,3 @@
         vertical-align: middle;
     }
 }
-
-/*
-    &__button::after {
-        content: "";
-        background-image: url(../image/search_btn.svg);
-        background-repeat: no-repeat;
-        
-        position: absolute;
-        height: 25px;
-        width: 25px;
-        color: white;
-        padding-right: 15px;
-        vertical-align: middle;
-    }
-}
-.button {}
-
-/*
-.search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    &__input {
-        width: 650px;
-        height: 60px;
-        border: 2px solid white;
-        outline: none;
-        background: white;
-        color: #9E9C9C;
-        font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
-        letter-spacing: 0.3em;
-        text-align: center;
-    }
-    &__button {
-        width: 145px;
-        height: 56px;
-        margin: 2px;
-        border: none;
-        background: $dodgerBlue1;
-        cursor: pointer;
-        font-family: $secondary-font;
-        font-size: 14px;
-        color: white;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-    }
-    &__button::after {
-        content: "";
-        background-image: url(../image/search_btn.svg);
-        position: absolute;
-        height: 25px;
-        width: 25px;
-        color: white;
-    }
-}
-
-    /*
-    
-    &__input {
-        position: relative;
-        width: 100%;
-        height: 60px;
-        border: 2px solid white;
-        outline: none;
-        background: white;
-        color: #9E9C9C;
-        font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
-        letter-spacing: 0.3em;
-        text-align: center;
-    }
-    &__button {
-        position: absolute; 
-        top: 0;
-        right: 0px;
-        width: 145px;
-        height: 56px;
-        margin: 2px;
-        border: none;
-        background: $dodgerBlue1;
-        cursor: pointer;
-        font-family: $secondary-font;
-        font-size: 14px;
-        color: white;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-    }
-    &__button::after {
-        content: "";
-        background-image: url(../image/search_btn.svg);
-        position: absolute;
-        font-size: 16px;
-        color: white;
-    }
-    &__scroll {
-    }
-}
-.title {
-}
-.subtitle {
-}
-.search {
-}
-*/
