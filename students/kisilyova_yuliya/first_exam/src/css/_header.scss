@@ -1,37 +1,54 @@
 .header {
-    &__conteiner {
-        background-image: url(../image/Img1.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100vh;
-        position: relative;
-    }
+    background-image: url(../image/Img1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
 
-    &__bhromaon {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding-top: 300px;
-        flex-grow: 1;
-    }
+.bhromaon {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
 
     &__title-main {
         color: $font-color;
         font-style: normal;
         font-size: 48px;
         text-transform: uppercase;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         text-align: center;
+        padding-top: 300px;
+        letter-spacing: 4px;
+    }
+
+    @media (max-width: 768px) {
+        &__title-main {
+            font-size: 30px;
+            padding-top: 150px;
+        }
     }
 
     &__title-subtitle {
         color: $font-color;
         font-style: normal;
         font-size: 22px;
-        letter-spacing: 0.5em;
+        letter-spacing: 5px;
         margin-bottom: 50px;
         text-align: center;
     }
+
+    @media (max-width: 768px) {
+        &__title-subtitle {
+            font-size: 16px;
+        }
+    }
+}
+
+.search {
+    align-self: normal;
 }
 
 .search-form {
@@ -40,8 +57,13 @@
     justify-content: center;
     align-self: normal;
 
+    @media (max-width: 576px) {
+        flex-direction: column;
+    }
+
     &__input {
-        width: 650px;
+        max-width: 500px;
+        width: 100%;
         height: 60px;
         box-sizing: border-box;
         border: 2px solid white;
@@ -49,8 +71,14 @@
         background: white;
         color: #9E9C9C;
         font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
-        letter-spacing: 0.3em;
+        letter-spacing: 2px;
         text-align: center;
+    }
+
+    @media (max-width: 576px) {
+        &__input {
+            max-width: 576px;
+        }
     }
 
     &__button {
@@ -63,10 +91,20 @@
         color: white;
         text-transform: uppercase;
         vertical-align: middle;
-        letter-spacing: 0.2em;
+        letter-spacing: 1px;
         font-size: 14px;
         position: relative;
     }
+
+    @media (max-width: 576px) {
+        &__button {
+            display: block;
+            margin: 20px auto 0px;
+
+        }
+
+    }
+
     &__button::after {
         content: "";
         position: absolute;
@@ -74,114 +112,209 @@
         background-repeat: no-repeat;
         width: 20px;
         height: 20px;
-        top: 30%;
-        left: 80%;
+        top: 33%;
+        left: 77%;
         color: white;
-        padding-left: 15px;
         vertical-align: middle;
     }
 }
 
-/*
-    &__button::after {
-        content: "";
-        background-image: url(../image/search_btn.svg);
-        background-repeat: no-repeat;
-        
-        position: absolute;
-        height: 25px;
-        width: 25px;
-        color: white;
-        padding-right: 15px;
-        vertical-align: middle;
-    }
-}
-.button {}
-
-/*
-.search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    &__input {
-        width: 650px;
-        height: 60px;
-        border: 2px solid white;
-        outline: none;
-        background: white;
-        color: #9E9C9C;
-        font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
-        letter-spacing: 0.3em;
-        text-align: center;
-    }
-    &__button {
-        width: 145px;
-        height: 56px;
-        margin: 2px;
-        border: none;
-        background: $dodgerBlue1;
-        cursor: pointer;
-        font-family: $secondary-font;
-        font-size: 14px;
-        color: white;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-    }
-    &__button::after {
-        content: "";
-        background-image: url(../image/search_btn.svg);
-        position: absolute;
-        height: 25px;
-        width: 25px;
-        color: white;
-    }
-}
-
-    /*
-    
-    &__input {
+.scroll {
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 120px;
         position: relative;
-        width: 100%;
-        height: 60px;
-        border: 2px solid white;
-        outline: none;
-        background: white;
-        color: #9E9C9C;
-        font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
-        letter-spacing: 0.3em;
-        text-align: center;
     }
-    &__button {
-        position: absolute; 
-        top: 0;
-        right: 0px;
-        width: 145px;
-        height: 56px;
-        margin: 2px;
-        border: none;
-        background: $dodgerBlue1;
-        cursor: pointer;
-        font-family: $secondary-font;
-        font-size: 14px;
-        color: white;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
+
+    @media (max-width: 576px) {
+        &__wrapper {
+            margin-top: 20px;
+        }
     }
-    &__button::after {
+
+    &__down {
         content: "";
-        background-image: url(../image/search_btn.svg);
+        display: block;
+        border-top: 3px solid white;
+        border-right: 3px solid white;
+        width: 13px;
+        height: 13px;
         position: absolute;
-        font-size: 16px;
+        transform: rotate(135deg);
+        cursor: pointer;
+        top: 20px;
+    }
+}
+
+.menu {
+    margin-top: 95px;
+    height: 80px;
+    background-color: $dodgerBlue1;
+    z-index: 10;
+    text-align: center;
+}
+
+.container {
+    width: 1110px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    position: relative;
+
+    &__logo {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        flex-grow: 2;
+
+        @media (max-width: 576px) {
+            font-size: 20px;
+        }
+
+        ;
+    }
+}
+
+.menu {
+    &__navigation {
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-end;
+        align-items: center;
+
+        @media (max-width: 576px) {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+    }
+
+    &__item {
+        font-family: $secondary-font;
+    }
+
+    &__item:not(:last-child) {
+        padding-right: 42px;
+    }
+
+    &__item:last-child {
+        padding-right: 10px;
+    }
+
+    &__link {
         color: white;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
     }
-    &__scroll {
+}
+
+.button {
+
+    position: relative;
+
+    &__input {
+        display: none;
+    }
+
+    @media (max-width: 576px) {
+        &__input {
+            display: block;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        &__burger-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 30px;
+            height: 30px;
+            background: white;
+            border-radius: 10%;
+            position: absolute;
+            top: 10px;
+            right: 40px;
+            cursor: pointer;
+            z-index: 20;
+        }
+    }
+
+}
+
+.burger-btn {
+    @media (max-width: 576px) {
+        &__line {
+            background-color: $dodgerBlue1;
+            position: absolute;
+            width: 22px;
+            left: 4px;
+            height: 2px;
+            top: 15px;
+            transition: all .5s ease-in-out;
+        }
+
+        &__line::before,
+        &__line::after {
+            content: "";
+            background-color: $dodgerBlue1;
+            position: absolute;
+            width: 22px;
+            left: 0;
+            height: 2px;
+            transition: all .5s ease-in-out;
+        }
+
+        &__line::before {
+            top: 8px;
+        }
+
+        &__line::after {
+            bottom: 8px;
+        }
     }
 }
-.title {
+
+.button {
+    &__input {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        clip: rect(0 0 0 0);
+
+        &:checked {
+            &+.button__burger-btn .burger-btn__line {
+                background-color: transparent;
+                transition: all .5s ease-in-out;
+
+                &::after,
+                &::before {
+                    top: unset;
+                    bottom: unset;
+                }
+
+                &::after {
+                    transform: rotate(45deg);
+                }
+
+                &::before {
+                    transform: rotate(-45deg);
+                }
+            }
+
+            &~.menu__list {
+                display: block;
+            }
+        }
+    }
 }
-.subtitle {
-}
-.search {
-}
-*/
