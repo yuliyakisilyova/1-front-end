@@ -266,4 +266,4 @@ if (dayQuestion === 31 && monthQuestion === 12) {
     dateResult = "Следующая дата - " + dayRez + "." + monthRez + "." + yearRez + ".";
 }
 console.log(dateResult);
->>>>>>> kisilyova_hw22_js_operators
+
