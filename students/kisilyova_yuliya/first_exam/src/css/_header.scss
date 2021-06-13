@@ -93,7 +93,7 @@
         letter-spacing: 1px;
         font-size: 14px;
         position: relative;
-        background: linear-gradient(45deg, rgba(73,107,254,1) 0%, rgba(73,107,254,1) 43%, rgba(84,116,253,1) 43%, rgba(84,116,253,1) 80%);
+        background: linear-gradient(45deg, rgba(73, 107, 254, 1) 0%, rgba(73, 107, 254, 1) 43%, rgba(84, 116, 253, 1) 43%, rgba(84, 116, 253, 1) 80%);
         background-position: 50%;
         background-size: 300% 100%;
         transition: background-position .5s ease-in-out;
@@ -182,9 +182,8 @@
         @media (max-width: 576px) {
             font-size: 20px;
             justify-content: center;
+            padding-top: 8px;
         }
-
-        ;
     }
 }
 
@@ -225,6 +224,12 @@
     }
 
     &__item {
+        @media (max-width: 768px) {
+            &:not(:last-child) {
+                padding-right: 15px;
+            }
+        }
+
         @media (max-width: 576px) {
             text-align: center;
             padding: 17px;
