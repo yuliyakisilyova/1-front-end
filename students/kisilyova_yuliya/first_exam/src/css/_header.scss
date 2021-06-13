@@ -85,7 +85,6 @@
         width: 145px;
         height: 60px;
         border: 2px solid white;
-        background: $dodgerBlue1;
         cursor: pointer;
         font-family: $secondary-font;
         color: white;
@@ -94,6 +93,14 @@
         letter-spacing: 1px;
         font-size: 14px;
         position: relative;
+        background: linear-gradient(45deg, rgba(73,107,254,1) 0%, rgba(73,107,254,1) 43%, rgba(84,116,253,1) 43%, rgba(84,116,253,1) 80%);
+        background-position: 50%;
+        background-size: 300% 100%;
+        transition: background-position .5s ease-in-out;
+    }
+
+    &__button:hover {
+        background-position: 0 100%;
     }
 
     @media (max-width: 576px) {
@@ -174,6 +181,7 @@
 
         @media (max-width: 576px) {
             font-size: 20px;
+            justify-content: center;
         }
 
         ;
@@ -186,12 +194,20 @@
         list-style-type: none;
         justify-content: flex-end;
         align-items: center;
+        transition: all .5s ease-in-out;
+
 
         @media (max-width: 576px) {
             display: block;
             position: absolute;
-            bottom: 0;
-            left: 0;
+            left: -15px;
+            right: -15px;
+            bottom: 55px;
+            visibility: hidden;
+            transform: translateY(100%);
+            max-height: 0;
+            font-size: 0;
+            overflow: hidden;
         }
 
     }
@@ -208,12 +224,34 @@
         padding-right: 10px;
     }
 
+    &__item {
+        @media (max-width: 576px) {
+            text-align: center;
+            padding: 17px;
+            z-index: 30;
+            border-top: 2px solid $dodgerBlue1;
+            background-color: whitesmoke;
+
+            &:not(:last-child),
+            &:last-child {
+                padding-right: 15px;
+            }
+        }
+    }
+
     &__link {
         color: white;
         text-decoration: none;
         font-size: 14px;
         font-weight: bold;
         text-transform: uppercase;
+
+        @media (max-width: 576px) {
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            color: #9E9C9C;
+        }
     }
 }
 
@@ -243,7 +281,7 @@
             border-radius: 10%;
             position: absolute;
             top: 10px;
-            right: 40px;
+            right: 0px;
             cursor: pointer;
             z-index: 20;
         }
@@ -260,6 +298,7 @@
             left: 4px;
             height: 2px;
             top: 15px;
+            border-radius: 5px;
             transition: all .5s ease-in-out;
         }
 
@@ -271,6 +310,7 @@
             width: 22px;
             left: 0;
             height: 2px;
+            border-radius: 5px;
             transition: all .5s ease-in-out;
         }
 
@@ -312,8 +352,13 @@
                 }
             }
 
-            &~.menu__list {
+            &~.menu__navigation {
                 display: block;
+                visibility: visible;
+                transition: all .5s ease-in-out;
+                transform: translateY(0);
+                max-height: 200px;
+                font-size: 15px;
             }
         }
     }
