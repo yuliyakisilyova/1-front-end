@@ -1,0 +1,44 @@
+.select {
+    display: block;
+    background-color: #333333;
+    height: 337px;
+
+    &__container {}
+
+    // .select__row-circles
+
+    &__row-circles {}
+
+    // .select__circles
+
+    &__circles::after {
+        content: "";
+        display: block;
+        border-top: 1px dotted white;
+        width: 350px;
+        border-radius: 100%;
+    }
+
+    &__row-pics {
+    }
+
+    &__svg:hover {
+        fill: white;
+    }
+
+    &__title {
+        display: block;
+        text-align: center;
+        font-family: $secondary-font;
+        font-size: 36px;
+        margin-top: 34px;
+    }
+    &__svg {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    }
+    &__svg-hover:hover {
+    fill: white;
+}
+}
