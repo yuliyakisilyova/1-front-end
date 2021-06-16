@@ -60,8 +60,17 @@ function numberFind(a) {
         if (sum === a) return true;
         else return false;
     }
-let sumResult = numberFind(28);
-console.log(sumResult);
+console.log(numberFind(28));
 
 
 6.//  Написать функцию, которая принимает минимальное и максимальное значения для диапазона, и выводит только те числа из диапазона, которые являются совершенными. Используйте написанную ранее функцию, чтобы узнавать, совершенное число или нет. 
+function numbersPerfect(min, max) {
+    let i = min;
+    let resultPerf = 0;
+    while (i < max) {
+        i++
+        if (numberFind(i)) return i;
+    }}
+console.log(numbersPerfect(0,7));
+
+
