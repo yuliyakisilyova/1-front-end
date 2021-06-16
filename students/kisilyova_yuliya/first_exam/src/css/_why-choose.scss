@@ -1,9 +1,9 @@
 .why-choose {
     background-image: url(../image/Img2.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 90px 0 90px;
-
+    @include picture-properties;
+    &__container {
+        padding-bottom: 90px;
+    }
     &__header {
         margin: 205px 0px 60px;
         font-size: 36px;
@@ -13,17 +13,14 @@
     &__paragraph {
         font-size: 13.5px;
         letter-spacing: 2px;
-        font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
         font-weight: 200;
         font-weight: normal;
         line-height: 1.6;
     }
 
-
     &__pics {
         z-index: 10;
     }
-
 }
 
 .wrapper-pictures {
@@ -51,22 +48,7 @@
 }
 
 .button-secondary {
-    margin-top: 60px;
-    width: 226px;
-    height: 60px;
-    border: 2px solid transparent;
-    cursor: pointer;
-    font-family: $secondary-font;
-    color: white;
-    text-transform: uppercase;
-    vertical-align: middle;
-    letter-spacing: 1px;
-    font-size: 14px;
-    position: relative;
-    background: linear-gradient(45deg, rgba(73, 107, 254, 1) 0%, rgba(73, 107, 254, 1) 43%, rgba(84, 116, 253, 1) 43%, rgba(84, 116, 253, 1) 80%);
-    background-position: 50%;
-    background-size: 300% 100%;
-    transition: background-position .5s ease-in-out;
+    @include button-style;
 
     @media (max-width: 576px) {
         display: block;

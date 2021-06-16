@@ -1,8 +1,6 @@
 .header {
     background-image: url(../image/Img1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 1;
+    @include picture-properties;
 }
 
 .bhromaon {
