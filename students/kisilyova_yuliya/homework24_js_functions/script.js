@@ -71,6 +71,6 @@ function numbersPerfect(min, max) {
         i++
         if (numberFind(i)) return i;
     }}
-console.log(numbersPerfect(0,7));
+console.log(numbersPerfect(21,29));
 
 
