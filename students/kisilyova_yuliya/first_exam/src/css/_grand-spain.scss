@@ -2,41 +2,32 @@
 
     background-image: url(../image/Img5.png);
     @include picture-properties;
-    height: 100vh;
 
-    &__first {}
 
     &__container {
-        padding-top: 410px;
+        padding: 230px 0px 100px;
         display: flex;
         justify-content: flex-start;
         position: relative;
     }
 
-    // .grand-spain-first__paragrahp
-    &__row {}
-
-    &__paragrahp {}
-
-    // .grand-spain-first__wrapper
+    &__row {
+        margin: 0px 15px;
+    }
 
     &__wrapper {
         height: 371px;
-        width: 540px;
+        max-width: 540px;
         background-color: #232323;
         opacity: 0.9;
         padding: 50px 30px;
     }
-
-    // .grand-spain-first__abovetitle
 
     &__abovetitle {
         display: block;
         font-size: 20px;
         padding-bottom: 25px;
     }
-
-    // .grand-spain-first__title
 
     &__title {
         font-size: 20px;
@@ -46,62 +37,55 @@
 
     &__text {
         font-size: 16px;
+        line-height: 26px;
+
+        @media screen and (max-width: 576px) {
+            font-size: 13px;
+        }
     }
 
     &__button-secondary {
         opacity: 1;
+        margin-top: -150px;
+        margin-left: 30px;
+
+        @media screen and (max-width: 576px) {
+            margin: 10px auto;
+        }
     }
 
-    &__button {
-        position: absolute;
-        top: 70%;
-        right: 76%;
-    }
 }
-
-.container {}
-
-.grand-spain-first-row {}
-
-.row {}
-
-.col-6 {}
 
 .grand-spain-second {
 
     background-image: url(../image/Img6.png);
     @include picture-properties;
-    height: 100vh;
 
-    &__paragrahp {}
-
-    // .grand-spain-second__wrapper
     &__container {
-        padding-top: 410px;
+        padding: 230px 0px 100px;
         display: flex;
         justify-content: flex-end;
         z-index: 10;
         position: relative;
+    }
 
+    &__row {
+        margin: 0px 15px;
     }
 
     &__wrapper {
         height: 371px;
-        width: 540px;
+        max-width: 540px;
         background-color: #232323;
         opacity: 0.9;
         padding: 50px 30px;
     }
-
-    // .grand-spain-second__abovetitle
 
     &__abovetitle {
         display: block;
         font-size: 20px;
         padding-bottom: 25px;
     }
-
-    // .grand-spain-second__title
 
     &__title {
         font-size: 20px;
@@ -110,15 +94,22 @@
 
     }
 
-    &__button {
-        position: absolute;
-        top: 70%;
-        left: 54%;
+    &__text {
+        font-size: 16px;
+        line-height: 26px;
+
+        @media screen and (max-width: 576px) {
+            font-size: 13px;
+        }
+    }
+
+    &__button-secondary {
+        opacity: 1;
+        margin-top: -150px;
+        margin-left: 30px;
+
+        @media screen and (max-width: 576px) {
+            margin: 10px auto;
+        }
     }
 }
-
-.grand-spain-second-container {}
-
-.grand-spain-second-row {}
-
-

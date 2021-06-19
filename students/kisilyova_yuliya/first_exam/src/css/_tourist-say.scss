@@ -1,0 +1,88 @@
+.tourist-say {
+
+    background-image: url(../image/Img7.png);
+    @include picture-properties;
+
+    &__container {
+        padding-bottom: 200px;
+    }
+
+    &__box {
+        display: flex;
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        display: block;
+        font-family: $secondary-font;
+        font-size: 36px;
+        text-align: center;
+        margin: 120px 0 100px;
+    }
+
+
+    &__wrapper-text {
+        background-color: #333333;
+        height: 284px;
+    }
+
+
+    &__under-title {
+        display: block;
+        text-transform: uppercase;
+        font-size: 20px;
+        margin: 50px 0px 34px 60px;
+
+        @media (max-width: 576px) {
+            font-size: 15px;
+            margin: 30px 0px 20px 60px;
+        }
+    }
+
+    &__under-text {
+        margin: 0px 55px 34px 60px;
+        line-height: 26px;
+        font-size: 13px;
+        position: relative;
+        text-indent: 2em;
+        text-align: justify;
+
+        @media (max-width: 576px) {
+            font-size: 10px;
+            text-indent: 1em;
+            margin: 0px 10px 34px 10px;
+        }
+    }
+
+    &__under-text::before {
+        content: "";
+        position: absolute;
+        mask-image: url(../image/quotes.svg);
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        top: -10%;
+        left: -4%;
+        background-color: $dodgerBlue1;
+        vertical-align: middle;
+        margin-left: 20px;
+    }
+
+    &__wrapper-img {
+        img {
+            @media (max-width: 576px) {
+                max-width: 100%;
+            }
+
+        }
+
+        @media (max-width: 992px) {
+            margin: 0 auto;
+        }
+
+    }
+}

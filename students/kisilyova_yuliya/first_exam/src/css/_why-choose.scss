@@ -1,13 +1,22 @@
 .why-choose {
     background-image: url(../image/Img2.png);
     @include picture-properties;
+
     &__container {
         padding-bottom: 90px;
     }
+
     &__header {
         margin: 205px 0px 60px;
         font-size: 36px;
         font-family: $secondary-font;
+        @media (max-width: 576px) {
+            margin: 120px 0px 60px;
+        }
+    }
+
+    &__row {
+        margin: 0px 0px;
     }
 
     &__paragraph {
@@ -30,21 +39,31 @@
         display: flex;
         justify-content: flex-start;
         z-index: 10;
+        padding: 0px 0px 5px 75px;
+
+        img {
+            max-width: 100%;
+        }
+        @media (max-width: 768px) {
+            padding: 0px 0px 5px 0px;
+        }
+        @media (max-width: 576px) {
+            justify-content: center;
+        }
     }
 
     &__mountain {
         display: flex;
         justify-content: flex-end;
         z-index: 10;
+
+        img {
+            max-width: 100%;
+        }
+        @media (max-width: 576px) {
+            justify-content: center;
+        }
     }
-}
-
-.wrapper-pictures {
-
-    &__lake {
-        padding: 0px 0px 5px 75px;
-    }
-
 }
 
 .button-secondary {
