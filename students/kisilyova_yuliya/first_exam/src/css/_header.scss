@@ -1,8 +1,6 @@
 .header {
     background-image: url(../image/Img1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 1;
+    @include picture-properties;
 }
 
 .bhromaon {
@@ -22,12 +20,12 @@
         text-align: center;
         padding-top: 300px;
         letter-spacing: 4px;
-    }
-
-    @media (max-width: 768px) {
-        &__title-main {
-            font-size: 30px;
+        @media (max-width: 768px) {
             padding-top: 150px;
+        }
+        @media (max-width: 576px) {
+            font-size: 30px;
+            padding-top: 130px;
         }
     }
 
@@ -129,7 +127,6 @@
         height: 20px;
         top: 33%;
         left: 77%;
-        color: white;
         vertical-align: middle;
     }
 }
@@ -150,17 +147,38 @@
         }
     }
 
-    &__down {
-        content: "";
-        display: block;
-        border-top: 3px solid white;
-        border-right: 3px solid white;
-        width: 13px;
-        height: 13px;
-        position: absolute;
-        transform: rotate(135deg);
-        cursor: pointer;
-        top: 20px;
+    .arrow-wrapper {
+        height: 20px;
+        margin-top: 50px;
+
+        &__arrow {
+            width: 20px;
+            position: absolute;
+            bottom: 30px;
+            top: 30%;
+            left: calc(50% - 10px);
+            animation: arrowDown 2s infinite;
+        }
+
+    }
+
+    @keyframes arrowDown {
+        0% {
+            top: 40px;
+        }
+
+        50% {
+            top: 10px;
+        }
+
+        100% {
+            top: 40px;
+        }
+    }
+
+    .link-label {
+        text-decoration: none;
+        color: $font-color;
     }
 }
 
@@ -170,10 +188,9 @@
     background-color: $dodgerBlue1;
     z-index: 10;
     text-align: center;
-}
-
-.container {
-    width: 1110px;
+    @media (max-width:576px) {
+        margin-top: 45px;
+    }
 }
 
 .navigation {
@@ -211,7 +228,7 @@
             position: absolute;
             left: -15px;
             right: -15px;
-            bottom: 55px;
+            bottom: 80px;
             visibility: hidden;
             transform: translateY(100%);
             max-height: 0;

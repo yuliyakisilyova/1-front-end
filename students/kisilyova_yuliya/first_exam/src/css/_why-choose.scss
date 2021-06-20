@@ -1,76 +1,91 @@
 .why-choose {
     background-image: url(../image/Img2.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 90px 0 90px;
+    @include picture-properties;
+
+    &__container {
+        padding-bottom: 90px;
+        @media (max-width:576px) {
+            padding-bottom: 60px;
+        }
+    }
 
     &__header {
         margin: 205px 0px 60px;
         font-size: 36px;
-        font-family: $secondary-font;
+        font-family: $secondary-font;     
+        @media (max-width: 768px) {
+            margin: 120px 0px 60px;
+        }
+        @media (max-width: 576px) {
+            font-size: 30px;
+            margin: 80px 0px 40px;
+        }
+    }
+
+    &__row {
+        margin: 0px 0px;
     }
 
     &__paragraph {
         font-size: 13.5px;
         letter-spacing: 2px;
-        font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
         font-weight: 200;
         font-weight: normal;
         line-height: 1.6;
     }
 
-
     &__pics {
         z-index: 10;
     }
-
 }
 
 .wrapper-pictures {
     margin-top: 120px;
 
+    @media (max-width: 768px) {
+        margin-top: 80px;
+    }
+    @media (max-width: 576px) {
+        margin-top: 60px;
+    }
+
     &__lake {
         display: flex;
         justify-content: flex-start;
         z-index: 10;
+        padding: 0px 0px 5px 75px;
+
+        img {
+            max-width: 100%;
+        }
+        @media (max-width: 768px) {
+            padding: 0px 0px 5px 0px;
+        }
+        @media (max-width: 576px) {
+            justify-content: center;
+        }
     }
 
     &__mountain {
         display: flex;
         justify-content: flex-end;
         z-index: 10;
+
+        img {
+            max-width: 100%;
+        }
+        @media (max-width: 576px) {
+            justify-content: center;
+        }
     }
-}
-
-.wrapper-pictures {
-
-    &__lake {
-        padding: 0px 0px 5px 75px;
-    }
-
 }
 
 .button-secondary {
-    margin-top: 60px;
-    width: 226px;
-    height: 60px;
-    border: 2px solid transparent;
-    cursor: pointer;
-    font-family: $secondary-font;
-    color: white;
-    text-transform: uppercase;
-    vertical-align: middle;
-    letter-spacing: 1px;
-    font-size: 14px;
-    position: relative;
-    background: linear-gradient(45deg, rgba(73, 107, 254, 1) 0%, rgba(73, 107, 254, 1) 43%, rgba(84, 116, 253, 1) 43%, rgba(84, 116, 253, 1) 80%);
-    background-position: 50%;
-    background-size: 300% 100%;
-    transition: background-position .5s ease-in-out;
+    @include button-style;
 
     @media (max-width: 576px) {
         display: block;
-        margin: 20px auto 0px;
+        margin: 30px auto 0px;
     }
 
 }
