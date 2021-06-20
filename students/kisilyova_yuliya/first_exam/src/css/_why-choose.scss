@@ -4,14 +4,21 @@
 
     &__container {
         padding-bottom: 90px;
+        @media (max-width:576px) {
+            padding-bottom: 60px;
+        }
     }
 
     &__header {
         margin: 205px 0px 60px;
         font-size: 36px;
-        font-family: $secondary-font;
-        @media (max-width: 576px) {
+        font-family: $secondary-font;     
+        @media (max-width: 768px) {
             margin: 120px 0px 60px;
+        }
+        @media (max-width: 576px) {
+            font-size: 30px;
+            margin: 80px 0px 40px;
         }
     }
 
@@ -34,6 +41,13 @@
 
 .wrapper-pictures {
     margin-top: 120px;
+
+    @media (max-width: 768px) {
+        margin-top: 80px;
+    }
+    @media (max-width: 576px) {
+        margin-top: 60px;
+    }
 
     &__lake {
         display: flex;
@@ -71,7 +85,7 @@
 
     @media (max-width: 576px) {
         display: block;
-        margin: 20px auto 0px;
+        margin: 30px auto 0px;
     }
 
 }

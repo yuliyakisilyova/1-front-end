@@ -20,12 +20,12 @@
         text-align: center;
         padding-top: 300px;
         letter-spacing: 4px;
-    }
-
-    @media (max-width: 768px) {
-        &__title-main {
-            font-size: 30px;
+        @media (max-width: 768px) {
             padding-top: 150px;
+        }
+        @media (max-width: 576px) {
+            font-size: 30px;
+            padding-top: 130px;
         }
     }
 
@@ -137,55 +137,40 @@
         }
     }
 
-    &__down {
-        content: "";
-        display: block;
-        border-top: 3px solid white;
-        border-right: 3px solid white;
-        width: 13px;
-        height: 13px;
-        position: absolute;
-        transform: rotate(135deg);
-        cursor: pointer;
-        top: 20px;
-        animation: arrowDown 2s infinite;
+    .arrow-wrapper {
+        height: 20px;
+        margin-top: 50px;
 
-    }
-
-    .test {
-        display: block;
-        width: 30px;
-        height: 30px;
-        background-image: url(../image/arrow.svg);
-        color: #e8e8e8;
-        background-repeat: no-repeat;
-        animation: animate 2s linear infinite;
-    }
-
-    @keyframes animate {
-        0% {
+        &__arrow {
+            width: 20px;
+            position: absolute;
             bottom: 30px;
+            top: 30%;
+            left: calc(50% - 10px);
+            animation: arrowDown 2s infinite;
+        }
+
+    }
+
+    @keyframes arrowDown {
+        0% {
+            top: 40px;
         }
 
         50% {
-            bottom: 0px;
+            top: 10px;
         }
 
         100% {
-            bottom: 30px;
+            top: 40px;
         }
     }
 
     .link-label {
         text-decoration: none;
         color: $font-color;
-
     }
-
-
 }
-
-
 
 .menu {
     margin-top: 95px;
@@ -193,6 +178,9 @@
     background-color: $dodgerBlue1;
     z-index: 10;
     text-align: center;
+    @media (max-width:576px) {
+        margin-top: 45px;
+    }
 }
 
 .navigation {

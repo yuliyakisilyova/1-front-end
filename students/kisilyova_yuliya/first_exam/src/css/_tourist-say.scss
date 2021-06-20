@@ -5,6 +5,14 @@
 
     &__container {
         padding-bottom: 200px;
+
+        @media (max-width:768px) {
+            padding-bottom: 120px;
+        }
+
+        @media (max-width:576px) {
+            padding-bottom: 90px;
+        }
     }
 
     &__box {
@@ -22,6 +30,16 @@
         font-size: 36px;
         text-align: center;
         margin: 120px 0 100px;
+
+        @media (max-width:768px) {
+            margin: 90px 0 70px;
+            font-size: 34px;
+        }
+
+        @media (max-width:576px) {
+            margin: 60px 0 50px;
+            font-size: 30px;
+        }
     }
 
 

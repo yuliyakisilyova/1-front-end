@@ -9,6 +9,13 @@
         display: flex;
         justify-content: flex-start;
         position: relative;
+
+        @media (max-width:768px) {
+            padding: 100px 0px 80px;
+        }
+        @media (max-width:576px) {
+            padding: 60px 0px 60px;
+        }
     }
 
     &__row {
@@ -21,6 +28,9 @@
         background-color: #232323;
         opacity: 0.9;
         padding: 50px 30px;
+        @media (max-width:576px) {
+            height: 320px;
+        }
     }
 
     &__abovetitle {
@@ -38,8 +48,7 @@
     &__text {
         font-size: 16px;
         line-height: 26px;
-
-        @media screen and (max-width: 576px) {
+        @media (max-width: 576px) {
             font-size: 13px;
         }
     }
@@ -67,6 +76,12 @@
         justify-content: flex-end;
         z-index: 10;
         position: relative;
+        @media (max-width:768px) {
+            padding: 100px 0px 80px;
+        }
+        @media (max-width:576px) {
+            padding: 60px 0px 60px;
+        }
     }
 
     &__row {
@@ -79,6 +94,9 @@
         background-color: #232323;
         opacity: 0.9;
         padding: 50px 30px;
+        @media (max-width:576px) {
+            height: 320px;
+        }
     }
 
     &__abovetitle {
@@ -97,8 +115,7 @@
     &__text {
         font-size: 16px;
         line-height: 26px;
-
-        @media screen and (max-width: 576px) {
+        @media (max-width: 576px) {
             font-size: 13px;
         }
     }

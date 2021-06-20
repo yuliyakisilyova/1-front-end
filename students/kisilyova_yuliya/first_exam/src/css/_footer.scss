@@ -2,18 +2,20 @@
     height: 268px;
     background-color: #232323;
     display: block;
-
-    // .footer__title
+    @media (max-width:576px) {
+        height: 220px;
+    }
 
     &__title {
         display: block;
         font-size: 24px;
         text-transform: uppercase;
         text-align: center;
-        padding: 90px 0px 16px;
+        padding: 90px 0px 16px; 
+        @media (max-width:576px) {
+            padding: 40px 0px 16px; 
+        }
     }
-
-    // .footer__text
 
     &__text {
         display: block;
