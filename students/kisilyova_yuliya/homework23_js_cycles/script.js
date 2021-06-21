@@ -17,43 +17,69 @@ console.log(rangeSum)
 
 
 2.//  Запросить 2 числа и найти только наибольший общий делитель.
-/*let a = +prompt("Введите первое число");
-let b = +prompt("Введите второе число");
+let firstNum = +prompt("Введите первое число");
+let secondNum = +prompt("Введите второе число");
 let rezDel;
 i = 0;
-if (a === b) {
-    rezDel = "Наибольший общий делитель - " + firstNum;
+if (firstNum === secondNum) {
+    rezDel = `Наибольший общий делитель - ${firstNum}`;
 }
-if (firstNum > secondNum) {
-    while (i < secondNum) {
-        i++
-        if ({
-
-        }
+if (firstNum < secondNum) {
+    while (i < firstNum) {
+        i++;
+        if (firstNum % i === 0 && secondNum % i === 0)
+        rezDel = `Наибольший общий делитель - ${i}`;
     }
-}*/
-str1 = prompt("Введите первое число",'');
-var num1 = parseInt(str1);
-str2 = prompt("Введите второе число",'');
-var num2 = parseInt(str2);
-var delitel = 0, p, r;
-    if (num1 < num2){p=num2; num2=num1; num1=p;} 
-    do { 
-        if (num1%num2==0){
-            delitel=num2;
-            } 
-        else {
-            r=num2;
-            num2=num1%num2;   
-            num1=r;    
-            delitel = num2; 
-           }
-        } 
-        while (num1%num2!=0);
-        if (delitel!=1) { 
-            document.write("Наибольшим общим делителем чисел" + str1 + " и " + str2 + " является число..." + delitel);
-            }
-        else {
-          document.write("Общего делителя нет");
-            }
-console.log("document.write")
+}
+console.log(rezDel);
+
+3.//  Запросить у пользователя число и вывести все делители этого числа.
+let askNumforAllDel = +prompt("Введите число");
+let allDel = '';
+for (i = 0; i <= askNumforAllDel; i++) {
+    if (askNumforAllDel % i === 0) {
+        allDel = `${allDel} ${i}`;
+    }
+}
+let allDelResult = 'Все делители введенного числа - ' + allDel;
+console.log(allDelResult); 
+
+4.//Определить количество цифр в введенном числе.
+let askNumQuantity = +prompt("Введите число");
+let k = 0;
+for(k = 0; askNumQuantity > 1; k++ ) {
+    askNumQuantity = askNumQuantity / 10;
+}
+let quantityNum = `Количество цифр - ${k}`;
+console.log(quantityNum);
+
+
+5.//Запросить у пользователя 10 чисел и подсчитать, сколько он ввел положительных, отрицательных и нулей. При этом также посчитать, сколько четных и нечетных. Вывести статистику на экран. Учтите, что достаточно одной переменной (не 10) для ввода чисел пользователем.
+let userNum;
+let userPositiveNum = 0;
+let userNegativeNum = 0;
+let userZeroNum = 0;
+let userEvenNum = 0;
+let userOddNum = 0;
+for (let j = 1; j <= 10; j++) {
+    userNum = +prompt('Введите число');
+    if (userNum > 0) {
+        userPositiveNum = ++userPositiveNum;
+    }
+    if (userNum < 0) {
+        userNegativeNum = ++userNegativeNum;
+    }
+    if (userNum === 0) {
+        userZeroNum = ++userZeroNum;
+    }
+    if (userNum % 2 ==0) {
+        userEvenNum = ++userEvenNum;
+    }
+    if (userNum % 2 !== 0) {
+        userOddNum = ++userOddNum;
+    }
+
+}
+
+let resultUserNum = `Положительных чисел - ${userPositiveNum}, отрицательных чисел - ${userNegativeNum}, введенных нулей - ${userZeroNum}, четных чисел - ${userEvenNum}, нечетных чисел - ${userOddNum}`;
+console.log(resultUserNum);
