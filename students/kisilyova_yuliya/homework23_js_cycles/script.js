@@ -9,7 +9,7 @@ else if (Number.isNaN(rangeEnd)) {
     rangeSum = "Можно ввести только число";
 }
 
-while(rangeStart <= rangeEnd){       
+while(rangeStart <= rangeEnd) {       
     rangeSum += rangeStart;  
     rangeStart++;
     }
@@ -17,8 +17,8 @@ console.log(rangeSum)
 
 
 2.//  Запросить 2 числа и найти только наибольший общий делитель.
-let firstNum = +prompt("Введите первое число");
-let secondNum = +prompt("Введите второе число");
+const firstNum = +prompt("Введите первое число");
+const secondNum = +prompt("Введите второе число");
 let rezDel;
 i = 0;
 if (firstNum === secondNum) {
@@ -34,7 +34,7 @@ if (firstNum < secondNum) {
 console.log(rezDel);
 
 3.//  Запросить у пользователя число и вывести все делители этого числа.
-let askNumforAllDel = +prompt("Введите число");
+const askNumforAllDel = +prompt("Введите число");
 let allDel = '';
 for (i = 0; i <= askNumforAllDel; i++) {
     if (askNumforAllDel % i === 0) {
