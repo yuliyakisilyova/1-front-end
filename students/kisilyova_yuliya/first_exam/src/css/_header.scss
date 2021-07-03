@@ -1,6 +1,10 @@
 .header {
     background-image: url(../image/Img1.png);
     @include picture-properties;
+
+    &__container{
+    min-height: calc(100vh - 80px);
+}
 }
 
 .bhromaon {
@@ -20,9 +24,11 @@
         text-align: center;
         padding-top: 300px;
         letter-spacing: 4px;
+
         @media (max-width: 768px) {
             padding-top: 150px;
         }
+
         @media (max-width: 576px) {
             font-size: 30px;
             padding-top: 130px;
@@ -173,11 +179,11 @@
 }
 
 .menu {
-    margin-top: 95px;
     height: 80px;
     background-color: $dodgerBlue1;
     z-index: 10;
     text-align: center;
+
     @media (max-width:576px) {
         margin-top: 45px;
     }
@@ -265,7 +271,6 @@
         color: white;
         text-decoration: none;
         font-size: 14px;
-        font-weight: bold;
         text-transform: uppercase;
 
         @media (max-width: 576px) {

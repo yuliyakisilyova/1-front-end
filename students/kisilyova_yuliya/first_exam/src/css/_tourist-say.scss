@@ -45,15 +45,15 @@
 
     &__wrapper-text {
         background-color: #333333;
-        height: 284px;
+        display: flex;
+        flex-direction: column;
     }
-
 
     &__under-title {
         display: block;
         text-transform: uppercase;
         font-size: 20px;
-        margin: 50px 0px 34px 60px;
+        margin: 50px 0px 20px 60px;
 
         @media (max-width: 576px) {
             font-size: 15px;
@@ -62,15 +62,15 @@
     }
 
     &__under-text {
-        margin: 0px 55px 34px 60px;
+        margin: 0px 50px 24px 60px;
         line-height: 26px;
         font-size: 13px;
         position: relative;
         text-indent: 2em;
-        text-align: justify;
+
 
         @media (max-width: 576px) {
-            font-size: 10px;
+            font-size: 12px;
             text-indent: 1em;
             margin: 0px 10px 34px 10px;
         }
@@ -92,10 +92,11 @@
 
     &__wrapper-img {
         img {
+            display: block;
+
             @media (max-width: 576px) {
                 max-width: 100%;
             }
-
         }
 
         @media (max-width: 992px) {
