@@ -69,17 +69,17 @@ function changeSec(sec) {
     this.seconds = this.seconds + sec;
     while (this.seconds > 59) {
         this.seconds = this.seconds - 60;
-        this.changeMin(1);
+        this.changeMin(true);
     }
 }
-timeInfo.changeSec(7600);
+timeInfo.changeSec(8000);
 console.log(timeOnScreen.call(timeInfo));
 
 function changeMin(min) {
     this.minutes = this.minutes + min
     while (this.minutes > 59) {
         this.minutes = this.minutes - 60;
-        this.changeHour(1);
+        this.changeHour(true);
     } 
 }
 timeInfo.changeMin(500);
