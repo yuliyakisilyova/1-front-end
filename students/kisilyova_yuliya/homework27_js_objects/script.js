@@ -72,7 +72,7 @@ function changeSec(sec) {
         this.changeMin(true);
     }
 }
-timeInfo.changeSec(6000);
+timeInfo.changeSec(8000);
 console.log(timeOnScreen.call(timeInfo));
 
 function changeMin(min) {
